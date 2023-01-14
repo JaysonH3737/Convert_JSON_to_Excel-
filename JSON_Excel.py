@@ -1,9 +1,12 @@
 import json
+
+# first you must install xwlt using "pip install xlwt" command in Comand Prompt with eleveated privlages (Run As Administator) 
 import xlwt
 
 # Read the JSON file
-with open("vehicle_data.json", "r") as json_file:
-    vehicle_data = json.load(json_file)
+# Replace "YOUR_FILE_NAME" with the name of your json file everywhere you see it
+with open("YOUR_FILE_NAME.json ", "r") as json_file:
+    YOUR_FILE_HERE_data = json.load(json_file)
 
 # Create an Excel file
 workbook = xlwt.Workbook()
@@ -15,4 +18,4 @@ for i, row in enumerate(json_data):
         worksheet.write(i, j, col)
 
 # Save the Excel file
-workbook.save("vehicle_database.xls")
+workbook.save("YOUR_FILE_NAME_database.xls")
